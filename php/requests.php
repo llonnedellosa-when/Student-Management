@@ -39,7 +39,7 @@ if (!$result) {
                 <img src="../images/BUp.png" alt="BU Logo" class="h-16 w-auto" />
                 <h1 class="text-xl font-bold">BICOL UNIVERSITY POLANGUI CLINIC - ADMIN - REQUESTS DATA</h1>
             </div>
-            <form class="flex border border-white rounded" action="requests.php" method="GET">
+            <form class="flex border border-white rounded bg-white" action="requests.php" method="GET">
                 <input
                     type="text"
                     placeholder="Search.."
