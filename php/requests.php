@@ -33,24 +33,29 @@ if (!$result) {
 </head>
 <body>
 <header>
-    <nav class="bg-[#253b80] border-b border-white h-35">
-        <div class="max-w-2x1 mx-auto px-2 py-4 flex justify-between items-center text-white">
+    <nav class="bg-[#253b80] border-b border-white h-20">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center text-white h-full">
             <div class="flex items-center space-x-3">
-                <img src="../images/BUp.png" alt="BU Logo" class="h-20 w-30 flex-shrink-0">
-                <h1 class="text-xl font-bold py-4">BICOL UNIVERSITY POLANGUI CLINIC - ADMIN - REQUESTS DATA</h1>
+                <img src="../images/BUp.png" alt="BU Logo" class="h-16 w-auto" />
+                <h1 class="text-xl font-bold">BICOL UNIVERSITY POLANGUI CLINIC - ADMIN - REQUESTS DATA</h1>
             </div>
-            <ul class="flex space-x-2">
-                <form class="example border border-white" action="requests.php" method="GET">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </ul>
+            <form class="flex border border-white rounded" action="requests.php" method="GET">
+                <input
+                    type="text"
+                    placeholder="Search.."
+                    name="search"
+                    class="px-2 py-1 text-black rounded-l focus:outline-none"
+                />
+                <button type="submit" class="px-3 bg-[#009bde] hover:bg-[#0082c8] rounded-r">
+                    <i class="fa fa-search text-white"></i>
+                </button>
+            </form>
         </div>
     </nav>
 </header>
 
 <!-- Sidebar -->
-<div class="group fixed top-[140px] left-0 h-[calc(100vh-140px)] w-14 hover:w-48 bg-[#111] transition-all duration-300 overflow-x-hidden z-20 flex flex-col">
+<div class="group fixed top-20 left-0 h-[calc(100vh-80px)] w-14 hover:w-48 bg-[#111] transition-all duration-300 overflow-x-hidden z-20 flex flex-col">
   <a href="Admin.php" class="flex items-center gap-4 px-4 py-3 text-gray-400 hover:text-white hover:bg-gray-800 transition">
     <i class="fa fa-home text-lg w-6"></i>
     <span class="whitespace-nowrap opacity-0 group-hover:opacity-100 transition">Home</span>
