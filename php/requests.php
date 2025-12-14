@@ -56,9 +56,7 @@ if (!$result) {
 
 
 <!-- Sidebar -->
-<div
-    class="group fixed top-20 left-0 h-[calc(100vh-80px)] w-14 hover:w-48 bg-[#111] transition-all duration-300 overflow-x-hidden z-20 flex flex-col"
->
+<div class="group fixed top-20 left-0 h-[calc(100vh-80px)] w-14 hover:w-48 bg-[#111] transition-all duration-300 overflow-x-hidden z-20 flex flex-col">
     <a
         href="Admin.php"
         class="flex items-center gap-4 px-4 py-3 text-gray-400 hover:text-white hover:bg-gray-800 transition"

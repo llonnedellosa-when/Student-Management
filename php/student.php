@@ -39,22 +39,29 @@ $result = $stmt->get_result();
 
 <!-- HEADER -->
 <header>
-    <nav class="border-b border-white">
-        <div class="py-4" style="background-color:#009bde;"></div>
-        <div class="px-6 py-4 flex justify-between items-center text-white bg-[#253b80]">
+    <nav class="bg-[#253b80] border-b border-white h-20">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center text-white h-full">
             <div class="flex items-center space-x-3">
-                <img src="../images/BUp.png" class="h-20">
-                <h1 class="text-xl font-bold">
-                    BICOL UNIVERSITY POLANGUI CLINIC – STUDENT LIST
-                </h1>
+                <img src="../images/BUp.png" alt="BU Logo" class="h-16 w-auto" />
+                <h1 class="text-xl font-bold">BICOL UNIVERSITY POLANGUI CLINIC - REQUEST</h1>
             </div>
+            <form class="flex border border-white rounded" action="action_page.php">
+                <input
+                    type="text"
+                    placeholder="Search.."
+                    name="search"
+                    class="px-2 py-1 text-black rounded-l focus:outline-none"
+                />
+                <button type="submit" class="px-3 bg-[#009bde] hover:bg-[#0082c8] rounded-r">
+                    <i class="fa fa-search text-white"></i>
+                </button>
+            </form>
         </div>
     </nav>
 </header>
 
 <!-- SIDEBAR -->
-<div class="group fixed top-[140px] left-0 h-[calc(100vh-140px)]
-            w-14 hover:w-48 bg-[#111] transition-all duration-300 z-20 flex flex-col">
+<div class="group fixed top-20 left-0 h-[calc(100vh-80px)] w-14 hover:w-48 bg-[#111] transition-all duration-300 overflow-x-hidden z-20 flex flex-col">
 
     <a href="Admin.php" class="flex items-center px-4 py-3 text-gray-400 hover:text-white">
         <i class="fa fa-home w-6"></i>
