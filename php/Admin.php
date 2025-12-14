@@ -58,7 +58,7 @@ for ($i = 5; $i >= 0; $i--) {
 ?>
 
 <body class="bg-gray-100 min-h-screen">
-<header>
+<header class="fixed top-0 left-0 w-full z-10">
     <nav class="bg-[#253b80] border-b border-white h-20">
         <div class="max-w-7xl mx-auto px-4 flex justify-between items-center text-white h-full">
             <div class="flex items-center space-x-3">
@@ -120,10 +120,11 @@ for ($i = 5; $i >= 0; $i--) {
 </div>
 
 <!-- Main content -->
-<main class="ml-14 hover:ml-48 transition-all duration-300 pt-8 pb-20 min-h-[calc(100vh-80px)]">
+<main class="ml-14 transition-all duration-300 pt-24 pb-20 min-h-[calc(100vh-80px)] w-full">
 
     <!-- Stats + Charts -->
-    <section class="w-[85%] mx-auto mb-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <section class="max-w-7xl mx-auto px-6 mb-10
+               grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Students Registered Card + count animation -->
         <div
             id="studentsCard"
@@ -223,6 +224,18 @@ const studentCounts = <?= json_encode(array_values($student_month_data)) ?>;
 document.addEventListener('DOMContentLoaded', () => {
     animateCount('studentsCount', <?= $students_count ?>);
     animateCount('requestsCount', <?= $requests_count ?>);
+
+    // Handle sidebar hover to adjust main margin
+    const sidebar = document.querySelector('.group');
+    const main = document.querySelector('main');
+    sidebar.addEventListener('mouseenter', () => {
+        main.classList.remove('ml-14');
+        main.classList.add('ml-48');
+    });
+    sidebar.addEventListener('mouseleave', () => {
+        main.classList.remove('ml-48');
+        main.classList.add('ml-14');
+    });
 
     // Chart 1: Pie chart for service requests by type
     new Chart(document.getElementById('serviceChart'), {
