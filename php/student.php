@@ -38,18 +38,19 @@ $result = $stmt->get_result();
 <body class="bg-gray-100 min-h-screen">
 
 <!-- HEADER -->
-<header>
+<header class="fixed top-0 left-0 w-full z-10">
     <nav class="bg-[#253b80] border-b border-white h-20">
         <div class="max-w-7xl mx-auto px-4 flex justify-between items-center text-white h-full">
             <div class="flex items-center space-x-3">
                 <img src="../images/BUp.png" alt="BU Logo" class="h-16 w-auto" />
-                <h1 class="text-xl font-bold">BICOL UNIVERSITY POLANGUI CLINIC - REQUEST</h1>
+                <h1 class="text-xl font-bold">BICOL UNIVERSITY POLANGUI CLINIC - ADMIN - STUDENT LIST</h1>
             </div>
-            <form class="flex border border-white rounded" action="action_page.php">
+            <form class="flex border border-white rounded bg-white" action="student.php" method="GET">
                 <input
                     type="text"
-                    placeholder="Search.."
+                    placeholder="Search student by email or ID..."
                     name="search"
+                    value="<?= htmlspecialchars($search) ?>"
                     class="px-2 py-1 text-black rounded-l focus:outline-none"
                 />
                 <button type="submit" class="px-3 bg-[#009bde] hover:bg-[#0082c8] rounded-r">
