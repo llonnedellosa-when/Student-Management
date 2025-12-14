@@ -71,6 +71,7 @@ if (isset($_GET['success']) && $_GET['success'] === 'registered'): ?>
         <p class="text-white text-sm mb-2">Don't have an account?</p>
 
         <!-- Register button -->
+         <!--Commit check-->
        <a 
           href="php/register.php"  
           class="block w-full px-6 py-2 bg-blue-500 text-white rounded-lg text-center hover:bg-blue-600"> Register
