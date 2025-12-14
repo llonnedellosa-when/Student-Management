@@ -45,7 +45,7 @@ $result = $stmt->get_result();
                 <img src="../images/BUp.png" alt="BU Logo" class="h-16 w-auto" />
                 <h1 class="text-xl font-bold">BICOL UNIVERSITY POLANGUI CLINIC - ADMIN - STUDENT LIST</h1>
             </div>
-         <form class="flex border border-white rounded bg-white" action="student.php" method="GET">
+            <form class="flex border border-white rounded bg-white" action="student.php" method="GET">
                 <input
                     type="text"
                     placeholder="Search student by email or ID..."
