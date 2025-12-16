@@ -237,8 +237,8 @@ for ($i = 5; $i >= 0; $i--) {
                         data: serviceCounts,
                         backgroundColor: [
                             '#3b82f6',
-                            '#10b981',
-                            '#f59e0b',
+                            '#ff8522ff',
+                            '#24ee11ff',
                             '#8b5cf6',
                             '#ef4444',
                             '#14b8a6',
