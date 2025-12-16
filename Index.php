@@ -13,10 +13,10 @@ session_start();
   <title>Student Management System</title>
 </head>
 
-<body class="min-h-screen bg-gradient-to-r from-blue-200 to-purple-300 flex flex-colshadow-md ">
+<body class="min-h-screen bg-[linear-gradient(to_bottom,rgba(191,219,254,0),rgba(59,130,246,0.8)),url('images/clinic.jpg')] bg-cover bg-center flex flex-col shadow-md">
 
   <main class="flex flex-1 items-center justify-center">
-    <div class="bg-gradient-to-tr from-blue-300 to-purple-400 p-25 rounded-xl shadow-lg border border-[#A7C7E7] w-100 text-center">
+    <div class="bg-gradient-to-tr from-blue-400 to-blue-100 p-25 rounded-xl shadow-lg border border-[#A7C7E7] w-110 text-center">
 
       <h1 class="text-3xl font-bold mb-2 text-black">Welcome!</h1>
       <p class="text-black mb-6">Log in to your account</p>
@@ -24,8 +24,8 @@ session_start();
       <?php
       // Display success message after registration
       if (isset($_GET['success']) && $_GET['success'] === 'registered'): ?>
-        <div class="bg-green-100 text-green-800 p-3 rounded-lg mb-4 text-center">
-          Account registered successfully! You can now log in.
+        <div class="bg-green-100 text-green-800 p-3 rounded-lg mb-2 text-center">
+          Account registered successfully! <br> You can now log in.
         </div>
       <?php endif; ?>
 
