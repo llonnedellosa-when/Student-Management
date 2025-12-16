@@ -150,7 +150,6 @@ for ($i = 5; $i >= 0; $i--) {
             </div>
         </section>
 
-HEAD
 
     <!-- Service Requests Table -->
 <section class="overflow-x-auto w-[85%] mx-auto bg-white rounded shadow-md p-4">
@@ -201,46 +200,6 @@ HEAD
 </section>
 
 
-</main>
-=======
-        <!-- Service Requests Table -->
-        <section class="overflow-x-auto w-[85%] mx-auto bg-white rounded shadow-md p-4">
-            <table class="w-full border border-gray-300 border-collapse text-sm">
-                <thead class="bg-gray-100">
-                    <tr>
-                        <th class="border border-gray-300 px-4 py-2 text-left">ID</th>
-                        <th class="border border-gray-300 px-4 py-2 text-left">Student Email</th>
-                        <th class="border border-gray-300 px-4 py-2 text-left">Service</th>
-                        <th class="border border-gray-300 px-4 py-2 text-left">Preferred Date</th>
-                        <th class="border border-gray-300 px-4 py-2 text-left">Notes</th>
-                        <th class="border border-gray-300 px-4 py-2 text-left">Requested At</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php if ($result && $result->num_rows > 0): ?>
-                        <?php while ($row = $result->fetch_assoc()): ?>
-                            <tr class="even:bg-gray-50">
-                                <td class="px-4 py-2 border border-gray-300"><?= htmlspecialchars($row['id']) ?></td>
-                                <td class="px-4 py-2 border border-gray-300"><?= htmlspecialchars($row['student_email']) ?></td>
-                                <td class="px-4 py-2 border border-gray-300"><?= htmlspecialchars($row['service']) ?></td>
-                                <td class="px-4 py-2 border border-gray-300"><?= htmlspecialchars($row['preferred_date']) ?></td>
-                                <td class="px-4 py-2 border border-gray-300"><?= htmlspecialchars($row['notes']) ?></td>
-                                <td class="px-4 py-2 border border-gray-300"><?= htmlspecialchars($row['created_at']) ?></td>
-                            </tr>
-                        <?php endwhile; ?>
-                    <?php else: ?>
-                        <tr>
-                            <td
-                                class="px-4 py-2 border border-gray-300 text-center"
-                                colspan="6">
-                                No service requests found.
-                            </td>
-                        </tr>
-                    <?php endif; ?>
-                </tbody>
-            </table>
-        </section>
-    </main>
 
 
     <script>
